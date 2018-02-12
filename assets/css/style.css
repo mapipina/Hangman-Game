@@ -1,0 +1,9 @@
+body {
+	background-image: url("../images/mickey-minimalist.jpg");
+	font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+	font-family: 'Poppins', sans-serif;
+	text-transform: uppercase;
+}
