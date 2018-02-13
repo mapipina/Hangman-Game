@@ -1,9 +1,12 @@
 // Choose a list of words
-var words = ['mickey','minnie','donald duck','disney','california','florida','anaheim','orlando','paris','tokyo','shanghai','oswald','disney interactive','disneyland','walt disney world','ears','mouse']
+var words = ['mickey','minnie','goofy','disney','california','florida']
 
 
 // Let computer choose random number generation
-var randomWords = words[Math.floor(Math.random()*words.length)];
+function randomWords() {
+	return words[Math.floor(Math.random()*words.length)];
+}
+// var randomWords = words[Math.floor(Math.random()*words.length)];
 
 // Have computer generate another randomWord. We'll get back to this
 for (var i=0; i < words.length; i++) {
