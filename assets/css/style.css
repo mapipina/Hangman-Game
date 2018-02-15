@@ -1,6 +1,14 @@
 body {
-	background-image: url("../images/mickey-minimalist.jpg");
+	background-image: url("../images/mickey-mouse-background-wallpaper-18.jpg");
+	background-repeat: no-repeat;
+	background-attachment: local;
 	font-family: 'Poppins', sans-serif;
+}
+
+
+.jumbotron {
+	background-color: transparent;
+
 }
 
 h1 {

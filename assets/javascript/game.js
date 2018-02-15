@@ -1,53 +1,49 @@
 // Choose a list of words
-var words = ['mickey','minnie','goofy','disney','california','florida']
+var words = ['mickey','minnie','disney','california','florida'];
 
+// Let computer display
+/*var display = document.getElementById("current");
+	display.innerHTML = words;*/
 
 // Let computer choose random number generation
-function randomWords() {
-	return words[Math.floor(Math.random()*words.length)];
-}
-// var randomWords = words[Math.floor(Math.random()*words.length)];
+var randomWords = words[Math.floor(Math.random()*words.length)];
 
-// Have computer generate another randomWord. We'll get back to this
-for (var i=0; i < words.length; i++) {
-	console.log(words[i])
-}
+// create answer array -- dashes needed to hide word
+var answerArray = [];
+for (var i = 0; i < randomWords.length; i++) {
+	answerArray[i] = "_";
+};
 
-//Let computer start game by pressing any key
+// show dashes that are length of word
+var display = document.getElementById("current");
+	display.innerHTML = answerArray;
+	display.innerHTML = answerArray.join(" "); 
 
-
-//Have computer display dashes equal to the amount of letters in the random word
-var makeSpaces = function(spaces) {
-	var blank = "";
-		for (var i = 0; i < spaces; i++) {
-			blank += '_ ';
-		}
-	return blank;
-}
-
-//Have computer tell you how many guesses you have left. make max guesses 10
-var guesses = 0;
-
-//Have computer replace dash with correct letter
+// variable to keep track of letters that remain to be guessed
+var remainingLetters = randomWords.length;
 
 
-//Have computer grab letters
-var guessed = document.getElementById("user-text");
 
-//Have computer grab letters guessed and display
-      document.onkeyup = function(event) {
-        guessed.textContent = event.key;
-      };
+// have computer push wrong letters guessed and displayed to array
+var usertext = document.getElementById("user-text");
+	document.onkeyup = function(event) {
+        usertext.textContent = event.key;};
+	var wrongLetters = 
+	var letterArray = [];
+	
+/*
+//How many guesses are left 
+var guesses=0;
 
-//Have computer inform user # of times they've won
-var wins = 0;
-      function updateWins() {
-        document.querySelector("#wins").innerHTML = "Score: " + score;
-      }
-
-//Have computer move on to next word by displaying next set of dashes 
-for (var i=0; i < words.length; i++) {
-	console.log(words[i])
+var showGuesses = document.getElementById("remaining") {
+	document
 }
 
-//Repeat all
+
+// How to show number of wins
+var winsNumber = 0;
+	for (var i = 0; i < Things.length; i++) {
+		Things[i]
+	}
+
+*/
