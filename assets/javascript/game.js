@@ -1,9 +1,7 @@
 //Top variables needed for game to work
 
 
-var selectableWords =           // Word list
-['mickey','minnie','disney','california','florida'];
-
+var disneyWords =  ['mickey','minnie','disney','california','florida', 'mouse', 'walt', 'paris','tokyo','shanghai','donald','goofy'];  // Word list
 const maxTries = 10;            // Maximum number of tries player has
 var guessedLetters = [];        // Stores the letters the user guessed incorrectly 
 var currentWordIndex;           // Index of the current word in the array
@@ -13,13 +11,13 @@ var gameStarted = false;        // Alert that shows game has started
 var hasFinished = false;        // Flag for 'press any key to try again'     
 var wins = 0;                   // How many wins the player has
 
-// Reset our game-level variables
+
 function resetGame() {
     remainingGuesses = maxTries;
     gameStarted = false;
 
-    // Need a random word selected by the computer
-    currentWordIndex = Math.floor(Math.random() * (selectableWords.length));
+    // Computr to select random word
+    currentWordIndex = Math.floor(Math.random() * (disneyWords.length));
 
     // Defining new arrays for the guessed word
     guessedLetters = [];
@@ -27,17 +25,17 @@ function resetGame() {
 
 
     // Hide random word and replace with dashes
-    for (var i = 0; i < selectableWords[currentWordIndex].length; i++) {
+    for (var i = 0; i < disneyWords[currentWordIndex].length; i++) {
         guessingWord.push("_");
     }
     // 
     document.getElementById("pressKeyTryAgain").style.cssText= "display: none";
 
-    // Show display
+
     updateDisplay();
 };
 
-//  Updates the display on the HTML Page
+
 function updateDisplay() {
 
     document.getElementById("totalWins").innerText = wins;
@@ -86,8 +84,8 @@ function makeGuess(letter) {
 // Replacing underscore/dash with correct letter guesses
 function evaluateGuess(letter) {
     var positions = [];
-    for (var i = 0; i < selectableWords[currentWordIndex].length; i++) {
-        if(selectableWords[currentWordIndex][i] === letter) {
+    for (var i = 0; i < disneyWords[currentWordIndex].length; i++) {
+        if(disneyWords[currentWordIndex][i] === letter) {
             positions.push(i);
         }
     }
