@@ -1,6 +1,3 @@
-//Top variables needed for game to work
-
-
 var disneyWords =  ['mickey','minnie','disney','california','florida', 'mouse', 'walt', 'paris','tokyo','shanghai','donald','goofy'];  // Word list
 const maxTries = 10;            // Maximum number of tries player has
 var guessedLetters = [];        // Stores the letters the user guessed incorrectly 
@@ -15,23 +12,17 @@ var wins = 0;                   // How many wins the player has
 function resetGame() {
     remainingGuesses = maxTries;
     gameStarted = false;
-
     // Computr to select random word
     currentWordIndex = Math.floor(Math.random() * (disneyWords.length));
-
     // Defining new arrays for the guessed word
     guessedLetters = [];
     guessingWord = [];
-
-
     // Hide random word and replace with dashes
     for (var i = 0; i < disneyWords[currentWordIndex].length; i++) {
         guessingWord.push("_");
     }
     // 
     document.getElementById("pressKeyTryAgain").style.cssText= "display: none";
-
-
     updateDisplay();
 };
 
