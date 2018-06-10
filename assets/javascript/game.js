@@ -80,7 +80,6 @@ function evaluateGuess(letter) {
             positions.push(i);
         }
     }
-
     // remove a guess when letter pressed is not in the random word 
     if (positions.length <= 0) {
         remainingGuesses--;
