@@ -1,8 +1,8 @@
-# Trivia Game
+# Disney Hangman
 A Disney twist on a classic game.
 
 ## How to Play
-Take a guess at which Disney word is hidden!
+Press on any key to get started.
 
 ## How it Works
 1. Once a player presses down on a key, a function is called to iterate over a set array of Disney-related words and randomly select which word to feature.
